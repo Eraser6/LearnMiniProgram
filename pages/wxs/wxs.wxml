@@ -1,0 +1,14 @@
+<!--pages/wxs/wxs.wxml-->
+<wxs src="../../wxs/info.wxs" module="info" />
+
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(1,2)}}</view>
+
+<wxs src="../../wxs/format.wxs" module="format" />
+
+<view>{{format.priceFormat(price)}}</view>
+
+<view wx:for="{{titles}}" wx:key="key" bindtap="handleClick" data-index="{{index}}" data-item="{{item}}">
+  {{item}}
+</view>

@@ -1,6 +1,12 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
+<!-- <view class="title">哈哈哈</view>
+<button size="mini">按钮</button> -->
 
-<view>知识点2</view>
-<view>嘿嘿嘿</view>
+<tab-control titles="{{['流行','新款','精选']}}" bind:titleClick="titleClick" />
+
+<button size="mini">修改组件内数据</button>
+<my-cpn>
+  <text slot="slot1">哈哈哈</text>
+  <slider value="60" slot="slot2"></slider>
+  <button slot="slot3" size="mini">按钮</button>
+</my-cpn>
